@@ -15,6 +15,9 @@
                 Text="Hae 3 testioppilasta" OnClick="btnGet3_Click" />
             <asp:Button ID="btnGetAll" runat="server"
                 text="Hae oppilaat tietokannasta" OnClick="btnGetAll_Click" />
+            <asp:Button ID="btnGetFromMysli" runat="server"
+                text="Hae Mysql-tietokannasta" OnClick="btnGetFromMysli_Click" />
+
         </div>
         <div id="tulos">
             <asp:GridView ID="gvStudents" runat="server" />

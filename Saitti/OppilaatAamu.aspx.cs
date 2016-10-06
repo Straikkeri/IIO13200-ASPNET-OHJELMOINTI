@@ -39,4 +39,18 @@ public partial class OppilaatAamu : System.Web.UI.Page
             lblMessages.Text = ex.Message;
         }
     }
+
+    protected void btnGetFromMysli_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string cs = ConfigurationManager.ConnectionStrings["Mysli"].ConnectionString;
+            gvStudents.DataSource = JAMK.ICT.Data.DBPlacebo.GetDataFromMysql(cs);
+            gvStudents.DataBind();
+        }
+        catch (Exception ex)
+        {
+            lblMessages.Text = ex.Message;
+        }
+    }
 }
